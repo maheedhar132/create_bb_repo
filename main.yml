@@ -1,0 +1,8 @@
+---
+- name: create bb repo
+  hosts: localhost
+  roles:
+    - role: create_branch
+      project-id: "{{project-id}}",
+      repo-name: "{{repo-name}}",
+      auth: "{{auth}}"
