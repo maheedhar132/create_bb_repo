@@ -17,7 +17,7 @@
     body: 
       file1:
         filename: readme.md
-        content: "{{role_path}}"/files/readme.md
+        content: "{{role_path}}/files/readme.md"
         message: First commit
         branch: master
     body_format: form-multipart
