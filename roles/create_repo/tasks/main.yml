@@ -16,7 +16,7 @@
     method: PUT
     body: 
       file1:
-        content: "{{role_path}}"/files/readme.md
+        content: {{role_path}}/files/readme.md
         message: First commit
         branch: master
     headers:
