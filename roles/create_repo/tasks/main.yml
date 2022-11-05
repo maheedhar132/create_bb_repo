@@ -16,9 +16,11 @@
     method: PUT
     body: 
       file1:
-        content: {{role_path}}/files/readme.md
+        filename: readme.md
+        content: "{{role_path}}"/files/readme.md
         message: First commit
         branch: master
+    body_format: form-multipart
     headers:
       'Authorization': 'Bearer {{auth}}'
     status_code: 201, 200
