@@ -2,10 +2,11 @@
 # tasks file for create_repo
 - name: Create a bitbucket repo
   uri:
-    url: http://3.110.30.238:7990/rest/api/1.0/projects/"{{project-id}}"/repos
+    url: http://13.126.124.176:7990/rest/api/1.0/projects/{{project_id}}/repos
     method: POST
-    body: { "name": "\"{{repo-name}}"\", "scmId": "git", "forkable": false }
+    body: { "name": "{{repo_name}}", "scmId": "git", "forkable": false }
     body_format: json
     headers:
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer "{{auth}}"'
+      "Content-Type": "application/json"
+      'Authorization': 'Bearer {{auth}}'
+    status_code: 201

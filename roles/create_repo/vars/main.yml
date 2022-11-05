@@ -1,5 +1,5 @@
 ---
 # vars file for create_repo
-project-id: "{{project-id}}",
-repo-name: "{{repo-name}}",
+project_id: "{{project_id}}"
+repo_name: "{{repo_name}}"
 auth: "{{auth}}"
