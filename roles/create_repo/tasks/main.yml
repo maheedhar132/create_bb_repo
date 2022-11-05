@@ -10,3 +10,16 @@
       "Content-Type": "application/json"
       'Authorization': 'Bearer {{auth}}'
     status_code: 201
+- name: Create master branch with sample commit
+  uri:
+    url: http://3.110.30.238:7990/api/latest/projects/{{project_id}}/repos/{{repo_name}}/browse/README.md
+    method: PUT
+    body: 
+      file1:
+        content: "{{role_path}}"/files/readme.md
+        message: First commit
+        branch: master
+    headers:
+      'Authorization': 'Bearer {{auth}}'
+    status_code: 201, 200
+
