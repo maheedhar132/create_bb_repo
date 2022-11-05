@@ -11,17 +11,10 @@
       'Authorization': 'Bearer {{auth}}'
     status_code: 201
 - name: Create master branch with sample commit
-  uri:
-    url: http://13.126.124.176:7990/api/latest/projects/{{project_id}}/repos/{{repo_name}}/browse/README.md
-    method: PUT
-    content: "{{role_path}}/files/readme.md"
-    body:
-      'message': 'first commit'
-      'branch': 'master'
-    body_format: json
-    headers:
-      'Authorization': 'Bearer {{auth}}'
-    status_code: 
-    - 201
-    - 200
+  command: " curl -X PUT \
+ --header 'Authorization: Bearer {{auth}}' \
+ -F content=@{{role_path}}/files/readme.md \
+ -F 'message=Master commit' \
+ -F branch=master \
+  http://3.110.30.238:7990/rest/api/latest/projects/{{project_id}}/repos/{{repo_name}}/browse/README.md "
 
