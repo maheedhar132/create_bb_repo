@@ -20,8 +20,10 @@
         content: "{{role_path}}/files/readme.md"
         message: First commit
         branch: master
-    body_format: form-multipart
+    body_format: raw
     headers:
       'Authorization': 'Bearer {{auth}}'
-    status_code: 201, 200
+    status_code: 
+    - 201
+    - 200
 
