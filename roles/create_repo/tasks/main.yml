@@ -20,7 +20,7 @@
         content: "{{role_path}}/files/readme.md"
         message: First commit
         branch: master
-    body_format: raw
+    body_format: form
     headers:
       'Authorization': 'Bearer {{auth}}'
     status_code: 
