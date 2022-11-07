@@ -17,7 +17,7 @@
 
 - name: Conditional check if the repo already exists
   command: echo "The repo with name {{repo_name}} already exists. Trying to create master branch in it."
-  when: "{{status_code}} == 409"
+  when: status_code|int == 409
 
 
 - name: Create master branch with sample commit
@@ -40,3 +40,4 @@
     status_code:
      - 201
      - 200
+     - 409
