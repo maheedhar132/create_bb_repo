@@ -12,7 +12,7 @@
     status_code: 
      - 201
      - 409
-    register: status_code
+  register: status_code
 
 
 - name: Conditional check if the repo already exists
