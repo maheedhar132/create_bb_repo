@@ -13,6 +13,8 @@
      - 201
      - 409
   register: status_code
+  debug:
+    var: status_code
 
 
 - name: Conditional check if the repo already exists
