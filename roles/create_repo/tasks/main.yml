@@ -18,7 +18,7 @@
 
 - name: Conditional check if the repo already exists
   debug:
-    var: status_code
+    var: status_code.status
 
 
 - name: Create master branch with sample commit
