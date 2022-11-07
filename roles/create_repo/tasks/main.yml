@@ -18,7 +18,8 @@
 
 - name: Conditional check if the repo already exists
   debug:
-    var: status_code.status
+    msg: "Repo with name {{repo_name}} already exists. Going ahead with Branch creation."
+  when: status_code.status|int == 409
 
 
 - name: Create master branch with sample commit
